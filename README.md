@@ -22,6 +22,27 @@ downloads and documentation. Live at https://status.flowplan.org
 - The page (`index.html`, `app.js`, `style.css`) is static, has no build step
   and reads that file. Incidents appear automatically in the timeline.
 
+## Reliable 5-minute checks
+
+GitHub's `schedule` trigger is best effort: runs are often late by 10–30
+minutes or skipped. An external cron service therefore starts the workflow
+every 5 minutes; the schedule stays as a fallback.
+
+1. Create a fine-grained personal access token (GitHub → Settings →
+   Developer settings → Fine-grained tokens): repository access *only*
+   `yannicschuller/flowplan-status`, permission **Actions: Read and write**,
+   nothing else.
+2. In a cron service (e.g. cron-job.org) create a job running every 5 minutes:
+   - `POST https://api.github.com/repos/yannicschuller/flowplan-status/actions/workflows/check.yml/dispatches`
+   - Headers: `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`,
+     `X-GitHub-Api-Version: 2022-11-28`, `Content-Type: application/json`
+   - Body: `{"ref":"main"}`
+   - Success is HTTP `204`.
+3. Renew the token before it expires (the job then fails with `401`).
+
+Overlapping runs are queued by the workflow's concurrency group, so a
+schedule run and a dispatched run never write at the same time.
+
 ## Data / API
 
 All files are public, CORS-enabled and at most about 10 minutes old:
