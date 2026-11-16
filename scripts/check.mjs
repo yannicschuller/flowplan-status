@@ -171,6 +171,15 @@ for (const [service, result] of results) {
   }
 }
 
+// A service that was removed from the config ends its open incident.
+const configured = new Set(services.map((s) => s.id));
+for (const i of data.incidents) {
+  if (!i.end && !configured.has(i.service)) {
+    i.end = nowIso;
+    resolvedNow.push(i);
+  }
+}
+
 // ---- GitHub issues ----------------------------------------------------------
 const token = process.env.GITHUB_TOKEN;
 const repo = process.env.GITHUB_REPOSITORY;
