@@ -1,0 +1,52 @@
+# Checks all Flowplan services every 5 minutes and stores the result on the
+# `status-data` branch (one commit that is amended each run, so the history
+# of this repository stays clean). The page reads status.json from there.
+name: Check services
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [services.json, scripts/**, .github/workflows/check.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Load current data
+        run: |
+          if git fetch --depth=1 origin status-data; then
+            git worktree add status-data FETCH_HEAD
+          else
+            git worktree add --detach status-data
+            git -C status-data rm -rfq .
+          fi
+
+      - name: Run checks
+        run: node scripts/check.mjs status-data/status.json
+
+      - name: Save data
+        working-directory: status-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git checkout --orphan next
+          git commit -qm "Status $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin next:status-data

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Flowplan Status</title>
+  <meta name="description" content="Aktueller Zustand aller Flowplan-Dienste und Verlauf vergangener Störungen." />
+  <meta name="theme-color" content="#fcfbf8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#16151b" media="(prefers-color-scheme: dark)" />
+  <!-- Where the checker writes its results (branch status-data). -->
+  <meta name="status-data" content="https://raw.githubusercontent.com/yannicschuller/flowplan-status/status-data/status.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="https://flowplan.org" aria-label="Flowplan">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4146e6"/><stop offset="1" stop-color="#6a3fe0"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#bm)"/><path d="M16 6.8 25.2 11.4 16 16 6.8 11.4Z" fill="#fff"/><g fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.8 16 16 20.6 25.2 16" opacity=".72"/><path d="M6.8 20.6 16 25.2 25.2 20.6" opacity=".42"/></g></svg>
+      <span class="wordmark">flowplan</span>
+      <span class="brand-tag" data-i18n="status">Status</span>
+    </a>
+    <a class="button" href="https://app.flowplan.org" data-i18n="openApp">Flowplan öffnen</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-live="polite">
+      <p class="eyebrow" id="eyebrow">&nbsp;</p>
+      <h1 id="headline"><span class="dot" id="hero-dot"></span><span id="headline-text" data-i18n="loading">Wird geladen …</span></h1>
+      <p class="lede" id="lede">&nbsp;</p>
+    </section>
+
+    <section id="ongoing" class="ongoing" hidden></section>
+
+    <div id="groups" class="groups"></div>
+
+    <section class="history" aria-labelledby="history-title">
+      <div class="section-head">
+        <h2 id="history-title" data-i18n="history">Verlauf</h2>
+        <p class="muted" data-i18n="historyNote">Störungen werden automatisch erkannt und hier eingetragen.</p>
+      </div>
+      <ol id="timeline" class="timeline"></ol>
+      <button id="more" class="button" type="button" hidden data-i18n="older">Ältere anzeigen</button>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="muted"><span data-i18n="footer">Geprüft alle 5 Minuten von außen über GitHub Actions.</span>
+      <a href="https://github.com/yannicschuller/flowplan-status" data-i18n="source">Quellcode</a></p>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-lang="de">Deutsch</button>
+      <button type="button" data-lang="en">English</button>
+    </div>
+  </footer>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+</body>
+</html>
