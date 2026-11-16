@@ -1,6 +1,6 @@
 # Flowplan Status
 
-Status page for all Flowplan services: the web app, API, MCP server, website,
+Status page for all Flowplan services: the web app, API, MCP server, push relay, website, marketplace,
 downloads and documentation. Live at https://yannicschuller.github.io/flowplan-status/
 
 ## How it works

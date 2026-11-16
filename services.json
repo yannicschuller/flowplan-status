@@ -2,56 +2,151 @@
   "groups": [
     {
       "id": "cloud",
-      "name": { "de": "Flowplan Cloud", "en": "Flowplan Cloud" },
+      "name": {
+        "de": "Flowplan Cloud",
+        "en": "Flowplan Cloud"
+      },
       "services": [
         {
           "id": "app",
-          "name": { "de": "Web-App", "en": "Web app" },
-          "description": { "de": "app.flowplan.org", "en": "app.flowplan.org" },
+          "name": {
+            "de": "Web-App",
+            "en": "Web app"
+          },
+          "description": {
+            "de": "app.flowplan.org",
+            "en": "app.flowplan.org"
+          },
           "url": "https://app.flowplan.org",
-          "expect": [200]
+          "expect": [
+            200
+          ]
         },
         {
           "id": "api",
-          "name": { "de": "API und Synchronisierung", "en": "API and sync" },
-          "description": { "de": "Datenbank, Dateien, Apps", "en": "Database, files, apps" },
+          "name": {
+            "de": "API und Synchronisierung",
+            "en": "API and sync"
+          },
+          "description": {
+            "de": "Datenbank, Dateien, Apps",
+            "en": "Database, files, apps"
+          },
           "url": "https://app.flowplan.org/api/health",
-          "expect": [200],
-          "json": { "status": "ok" }
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
+          }
         },
         {
           "id": "mcp",
-          "name": { "de": "MCP-Server", "en": "MCP server" },
-          "description": { "de": "Claude, ChatGPT und andere KI-Assistenten", "en": "Claude, ChatGPT and other AI assistants" },
+          "name": {
+            "de": "MCP-Server",
+            "en": "MCP server"
+          },
+          "description": {
+            "de": "Claude, ChatGPT und andere KI-Assistenten",
+            "en": "Claude, ChatGPT and other AI assistants"
+          },
           "url": "https://app.flowplan.org/api/mcp",
-          "expect": [200, 401, 405, 406]
+          "expect": [
+            200,
+            401,
+            405,
+            406
+          ]
+        },
+        {
+          "id": "push",
+          "name": {
+            "de": "Push-Benachrichtigungen",
+            "en": "Push notifications"
+          },
+          "description": {
+            "de": "Benachrichtigungen an die iOS- und Android-App",
+            "en": "Notifications to the iOS and Android app"
+          },
+          "url": "https://push.flowplan.org/healthz",
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
+          }
         }
       ]
     },
     {
       "id": "public",
-      "name": { "de": "Website und Hilfe", "en": "Website and help" },
+      "name": {
+        "de": "Website, Marketplace und Hilfe",
+        "en": "Website, marketplace and help"
+      },
       "services": [
         {
           "id": "website",
-          "name": { "de": "Website", "en": "Website" },
-          "description": { "de": "flowplan.org", "en": "flowplan.org" },
+          "name": {
+            "de": "Website",
+            "en": "Website"
+          },
+          "description": {
+            "de": "flowplan.org",
+            "en": "flowplan.org"
+          },
           "url": "https://flowplan.org",
-          "expect": [200]
+          "expect": [
+            200
+          ]
+        },
+        {
+          "id": "marketplace",
+          "name": {
+            "de": "Marketplace",
+            "en": "Marketplace"
+          },
+          "description": {
+            "de": "Vorlagen, Workflows und Looks",
+            "en": "Templates, workflows and looks"
+          },
+          "url": "https://marketplace.flowplan.org/api/health",
+          "expect": [
+            200
+          ],
+          "json": {
+            "ok": true
+          }
         },
         {
           "id": "downloads",
-          "name": { "de": "Downloads", "en": "Downloads" },
-          "description": { "de": "Desktop- und Mobil-Apps", "en": "Desktop and mobile apps" },
+          "name": {
+            "de": "Downloads",
+            "en": "Downloads"
+          },
+          "description": {
+            "de": "Desktop- und Mobil-Apps",
+            "en": "Desktop and mobile apps"
+          },
           "url": "https://flowplan.org/download",
-          "expect": [200]
+          "expect": [
+            200
+          ]
         },
         {
           "id": "docs",
-          "name": { "de": "Dokumentation", "en": "Documentation" },
-          "description": { "de": "docs.flowplan.org", "en": "docs.flowplan.org" },
+          "name": {
+            "de": "Dokumentation",
+            "en": "Documentation"
+          },
+          "description": {
+            "de": "docs.flowplan.org",
+            "en": "docs.flowplan.org"
+          },
           "url": "https://docs.flowplan.org",
-          "expect": [200]
+          "expect": [
+            200
+          ]
         }
       ]
     }
