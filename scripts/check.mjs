@@ -7,8 +7,10 @@
 //   badge.json    shields.io endpoint for a README badge
 //   summary.json  small overall state for the status dot on other sites
 //
-// An incident opens on the first failed check and closes on the first
-// successful one. With GITHUB_TOKEN set (GitHub Actions), every outage also
+// An incident opens once CONFIRM_CHECKS checks in a row have failed (dated
+// back to the first of them) and closes on the first successful one: a
+// deployment that restarts a service for a minute or two shows in the
+// response times and the day bars, but not as an incident. With GITHUB_TOKEN set (GitHub Actions), every outage also
 // gets an issue: it is assigned to the repository owner (so they are
 // notified), closed on recovery, and comments by the owner or collaborators
 // appear as updates in the timeline on the page.
@@ -32,6 +34,8 @@ const SAMPLE_HOURS = 24;
 const HOURLY_DAYS = 7;
 // A slow service only gets an issue once it has stayed slow for this many checks.
 const DEGRADED_ISSUE_AFTER = 3;
+// Failed checks in a row (one every 5 minutes) before an incident opens.
+const CONFIRM_CHECKS = 2;
 const COMMENT_WINDOW_DAYS = 14;
 const RANK = { up: 0, degraded: 1, down: 2 };
 
@@ -119,23 +123,39 @@ for (const [service, result] of results) {
   const status = maint ? "maintenance" : result.status;
 
   const prev = data.services[service.id];
+  const open = data.incidents.find((i) => i.service === service.id && !i.end);
+  // Failed checks in a row, since when, the worst state and first message of
+  // them: until CONFIRM_CHECKS have failed (a deployment, a short restart) the
+  // service is shown as up and no incident opens; the response times still
+  // show the slow or failed check.
+  const failing = status !== "up" && status !== "maintenance";
+  const failStreak = failing ? (prev?.failStreak || 0) + 1 : 0;
+  const failingSince = failing ? (failStreak > 1 && prev?.failingSince) || nowIso : null;
+  const worst = failing ? (failStreak > 1 && RANK[prev?.worst] > RANK[status] ? prev.worst : status) : null;
+  const firstMessage = failing ? (failStreak > 1 && prev?.firstMessage) || result.message : null;
+  const shown = failing && failStreak < CONFIRM_CHECKS && !open ? "up" : status;
+
   data.services[service.id] = {
-    status,
+    status: shown,
     latency: result.latency,
     code: result.code ?? null,
-    message: result.message ?? null,
+    message: shown === "up" ? null : (result.message ?? null),
     checks: result.checks ?? null,
     checkedAt: nowIso,
-    since: prev && prev.status === status ? prev.since : nowIso,
+    since: prev && prev.status === shown ? prev.since : shown === status && failingSince ? failingSince : nowIso,
+    failStreak,
+    failingSince,
+    worst,
+    firstMessage,
   };
 
   const days = (data.days[service.id] ||= {});
   const day = (days[today] ||= { n: 0, down: 0, degraded: 0, ms: 0 });
   day.n += 1;
-  if (status !== "up") day[status] = (day[status] || 0) + 1;
+  if (shown !== "up") day[shown] = (day[shown] || 0) + 1;
   day.ms += result.latency;
 
-  // Response times.
+  // Response times (as measured, also for unconfirmed failures).
   const minute = Math.round(now.getTime() / 60000);
   const code = { up: "u", degraded: "d", down: "x", maintenance: "m" }[status];
   (latency.samples[service.id] ||= []).push([minute, result.latency, code]);
@@ -147,7 +167,6 @@ for (const [service, result] of results) {
   if (status === "down") h[3] += 1;
 
   if (status === "maintenance") continue;
-  const open = data.incidents.find((i) => i.service === service.id && !i.end);
   if (status === "up") {
     if (open) {
       open.end = nowIso;
@@ -157,16 +176,16 @@ for (const [service, result] of results) {
     open.failedChecks = (open.failedChecks || 1) + 1;
     if (RANK[status] > RANK[open.status]) open.status = status;
     open.lastMessage = result.message;
-  } else {
+  } else if (failStreak >= CONFIRM_CHECKS) {
     data.incidents.push({
-      id: `${service.id}-${nowIso.replace(/[-:.]/g, "").slice(0, 15)}`,
+      id: `${service.id}-${failingSince.replace(/[-:.]/g, "").slice(0, 15)}`,
       service: service.id,
-      status,
-      start: nowIso,
+      status: worst,
+      start: failingSince,
       end: null,
-      message: result.message,
+      message: firstMessage,
       lastMessage: result.message,
-      failedChecks: 1,
+      failedChecks: failStreak,
     });
   }
 }

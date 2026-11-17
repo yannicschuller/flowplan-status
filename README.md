@@ -9,9 +9,11 @@ translation tool, downloads and documentation. Live at https://status.flowplan.o
 
 - `services.json` lists the services and what a healthy answer looks like.
 - `.github/workflows/check.yml` runs `scripts/check.mjs` every 5 minutes on
-  GitHub Actions. Each failed check is retried once; a service that still
-  fails (or answers slower than 4 s) opens an incident, the first successful
-  check closes it.
+  GitHub Actions. Each failed check is retried once. A service that still
+  fails (or answers slower than 4 s) in two checks in a row opens an incident,
+  dated back to the first of them; the first successful check closes it. A
+  single failed check – typically a deployment restarting the service – only
+  shows in the response times, not as an incident or in the uptime bars.
 - Every outage also opens a GitHub issue with the label `incident`, assigned
   to the repository owner, so GitHub notifies you. It closes itself when the
   service recovers. **Comments by the owner or collaborators on that issue
