@@ -3,7 +3,7 @@
 [![Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fyannicschuller%2Fflowplan-status%2Fstatus-data%2Fbadge.json&cacheSeconds=300)](https://status.flowplan.org)
 
 Status page for all Flowplan services: the web app, API, MCP server, push relay, website, marketplace,
-downloads and documentation. Live at https://status.flowplan.org
+translation tool, downloads and documentation. Live at https://status.flowplan.org
 
 ## How it works
 

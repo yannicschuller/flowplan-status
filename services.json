@@ -81,8 +81,8 @@
     {
       "id": "public",
       "name": {
-        "de": "Website, Marketplace und Hilfe",
-        "en": "Website, marketplace and help"
+        "de": "Website, Marketplace, Übersetzungen und Hilfe",
+        "en": "Website, marketplace, translations and help"
       },
       "services": [
         {
@@ -116,6 +116,24 @@
           ],
           "json": {
             "ok": true
+          }
+        },
+        {
+          "id": "translate",
+          "name": {
+            "de": "Übersetzungen",
+            "en": "Translations"
+          },
+          "description": {
+            "de": "translate.flowplan.org",
+            "en": "translate.flowplan.org"
+          },
+          "url": "https://translate.flowplan.org/api/health",
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
           }
         },
         {
