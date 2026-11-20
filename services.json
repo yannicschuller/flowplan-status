@@ -137,6 +137,24 @@
           }
         },
         {
+          "id": "vote",
+          "name": {
+            "de": "Galerie-Bewertungen",
+            "en": "Gallery votes"
+          },
+          "description": {
+            "de": "vote.flowplan.org",
+            "en": "vote.flowplan.org"
+          },
+          "url": "https://vote.flowplan.org/api/health",
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
+          }
+        },
+        {
           "id": "downloads",
           "name": {
             "de": "Downloads",
@@ -165,6 +183,24 @@
           "expect": [
             200
           ]
+        },
+        {
+          "id": "ask",
+          "name": {
+            "de": "Frag Flo",
+            "en": "Ask Flo"
+          },
+          "description": {
+            "de": "Der Docs-Assistent auf docs.flowplan.org und im Discord",
+            "en": "The docs assistant on docs.flowplan.org and in Discord"
+          },
+          "url": "https://ask.flowplan.org/api/health",
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
+          }
         }
       ]
     }
