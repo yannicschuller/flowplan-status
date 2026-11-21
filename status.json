@@ -1,0 +1,846 @@
+{
+ "services": {
+  "app": {
+   "status": "up",
+   "latency": 814,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T11:54:58.531Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "api": {
+   "status": "up",
+   "latency": 627,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T11:54:58.531Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "mcp": {
+   "status": "up",
+   "latency": 622,
+   "code": 405,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T11:54:58.531Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "website": {
+   "status": "up",
+   "latency": 1052,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-18T10:55:29.920Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "downloads": {
+   "status": "up",
+   "latency": 790,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-16T01:38:19.532Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "docs": {
+   "status": "up",
+   "latency": 1837,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-16T22:55:40.004Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "push": {
+   "status": "up",
+   "latency": 619,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T08:40:36.143Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "marketplace": {
+   "status": "up",
+   "latency": 720,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T08:40:36.143Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "translate": {
+   "status": "up",
+   "latency": 674,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-17T11:55:38.922Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "vote": {
+   "status": "up",
+   "latency": 731,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-20T00:28:10.993Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  },
+  "ask": {
+   "status": "up",
+   "latency": 745,
+   "code": 200,
+   "message": null,
+   "checks": null,
+   "checkedAt": "2026-11-21T14:00:55.454Z",
+   "since": "2026-11-20T00:28:10.993Z",
+   "failStreak": 0,
+   "failingSince": null,
+   "worst": null,
+   "firstMessage": null
+  }
+ },
+ "days": {
+  "app": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 1,
+    "degraded": 1,
+    "ms": 259889
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 2,
+    "degraded": 2,
+    "ms": 322343
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 301760
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 249434
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 249536
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 143449
+   }
+  },
+  "api": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 1,
+    "degraded": 2,
+    "ms": 203450
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 2,
+    "degraded": 2,
+    "ms": 262991
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 238638
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 190672
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 183907
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 109140
+   }
+  },
+  "mcp": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 1,
+    "degraded": 1,
+    "ms": 199062
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 2,
+    "degraded": 2,
+    "ms": 265011
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 231769
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 196595
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 183946
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 108051
+   }
+  },
+  "website": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 0,
+    "degraded": 2,
+    "ms": 320236
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 331684
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 1,
+    "degraded": 0,
+    "ms": 346556
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 325874
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 323312
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 194197
+   }
+  },
+  "downloads": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 0,
+    "degraded": 0,
+    "ms": 231727
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 254270
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 262240
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 256867
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 249903
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 152410
+   }
+  },
+  "docs": {
+   "2026-11-16": {
+    "n": 264,
+    "down": 0,
+    "degraded": 1,
+    "ms": 529696
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 578529
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 623576
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 649926
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 667529
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 399032
+   }
+  },
+  "push": {
+   "2026-11-16": {
+    "n": 263,
+    "down": 0,
+    "degraded": 0,
+    "ms": 202304
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 2,
+    "degraded": 0,
+    "ms": 245423
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 214752
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 207713
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 198286
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 118702
+   }
+  },
+  "marketplace": {
+   "2026-11-16": {
+    "n": 263,
+    "down": 0,
+    "degraded": 2,
+    "ms": 215444
+   },
+   "2026-11-17": {
+    "n": 293,
+    "down": 2,
+    "degraded": 0,
+    "ms": 255823
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 218370
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 214700
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 204885
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 121397
+   }
+  },
+  "translate": {
+   "2026-11-17": {
+    "n": 148,
+    "down": 1,
+    "degraded": 0,
+    "ms": 119927
+   },
+   "2026-11-18": {
+    "n": 292,
+    "down": 0,
+    "degraded": 0,
+    "ms": 233287
+   },
+   "2026-11-19": {
+    "n": 291,
+    "down": 0,
+    "degraded": 0,
+    "ms": 217148
+   },
+   "2026-11-20": {
+    "n": 293,
+    "down": 0,
+    "degraded": 0,
+    "ms": 204746
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 126905
+   }
+  },
+  "vote": {
+   "2026-11-20": {
+    "n": 287,
+    "down": 0,
+    "degraded": 0,
+    "ms": 218547
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 137797
+   }
+  },
+  "ask": {
+   "2026-11-20": {
+    "n": 287,
+    "down": 0,
+    "degraded": 0,
+    "ms": 227931
+   },
+   "2026-11-21": {
+    "n": 171,
+    "down": 0,
+    "degraded": 0,
+    "ms": 146237
+   }
+  }
+ },
+ "incidents": [
+  {
+   "id": "website-20261118T104546",
+   "service": "website",
+   "status": "down",
+   "start": "2026-11-18T10:45:46.602Z",
+   "end": "2026-11-18T10:55:29.920Z",
+   "message": "HTTP 500",
+   "lastMessage": "HTTP 500",
+   "failedChecks": 2,
+   "issue": 15,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/15"
+  },
+  {
+   "id": "translate-20261117T115458",
+   "service": "translate",
+   "status": "down",
+   "start": "2026-11-17T11:54:58.531Z",
+   "end": "2026-11-17T11:55:38.922Z",
+   "message": "HTTP 503",
+   "lastMessage": "HTTP 503",
+   "failedChecks": 1,
+   "issue": 14,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/14"
+  },
+  {
+   "id": "app-20261117T115045",
+   "service": "app",
+   "status": "degraded",
+   "start": "2026-11-17T11:50:45.548Z",
+   "end": "2026-11-17T11:54:58.531Z",
+   "message": "Slow response (6354 ms)",
+   "lastMessage": "Slow response (6354 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "api-20261117T115045",
+   "service": "api",
+   "status": "degraded",
+   "start": "2026-11-17T11:50:45.548Z",
+   "end": "2026-11-17T11:54:58.531Z",
+   "message": "Slow response (5968 ms)",
+   "lastMessage": "Slow response (5968 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "mcp-20261117T115045",
+   "service": "mcp",
+   "status": "degraded",
+   "start": "2026-11-17T11:50:45.548Z",
+   "end": "2026-11-17T11:54:58.531Z",
+   "message": "Slow response (6036 ms)",
+   "lastMessage": "Slow response (6036 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "app-20261117T083527",
+   "service": "app",
+   "status": "down",
+   "start": "2026-11-17T08:35:27.507Z",
+   "end": "2026-11-17T08:40:36.143Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 9,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/9"
+  },
+  {
+   "id": "api-20261117T083527",
+   "service": "api",
+   "status": "down",
+   "start": "2026-11-17T08:35:27.507Z",
+   "end": "2026-11-17T08:40:36.143Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 10,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/10"
+  },
+  {
+   "id": "mcp-20261117T083527",
+   "service": "mcp",
+   "status": "down",
+   "start": "2026-11-17T08:35:27.507Z",
+   "end": "2026-11-17T08:40:36.143Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 11,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/11"
+  },
+  {
+   "id": "push-20261117T083527",
+   "service": "push",
+   "status": "down",
+   "start": "2026-11-17T08:35:27.507Z",
+   "end": "2026-11-17T08:40:36.143Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 12,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/12"
+  },
+  {
+   "id": "marketplace-20261117T083527",
+   "service": "marketplace",
+   "status": "down",
+   "start": "2026-11-17T08:35:27.507Z",
+   "end": "2026-11-17T08:40:36.143Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 13,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/13"
+  },
+  {
+   "id": "app-20261117T060057",
+   "service": "app",
+   "status": "degraded",
+   "start": "2026-11-17T06:00:57.410Z",
+   "end": "2026-11-17T06:05:39.230Z",
+   "message": "Slow response (10385 ms)",
+   "lastMessage": "Slow response (10385 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "api-20261117T060057",
+   "service": "api",
+   "status": "degraded",
+   "start": "2026-11-17T06:00:57.410Z",
+   "end": "2026-11-17T06:05:39.230Z",
+   "message": "Slow response (9811 ms)",
+   "lastMessage": "Slow response (9811 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "mcp-20261117T060057",
+   "service": "mcp",
+   "status": "degraded",
+   "start": "2026-11-17T06:00:57.410Z",
+   "end": "2026-11-17T06:05:39.230Z",
+   "message": "Slow response (9856 ms)",
+   "lastMessage": "Slow response (9856 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "app-20261117T013050",
+   "service": "app",
+   "status": "down",
+   "start": "2026-11-17T01:30:50.907Z",
+   "end": "2026-11-17T01:35:26.908Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 4,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/4"
+  },
+  {
+   "id": "api-20261117T013050",
+   "service": "api",
+   "status": "down",
+   "start": "2026-11-17T01:30:50.907Z",
+   "end": "2026-11-17T01:35:26.908Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 5,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/5"
+  },
+  {
+   "id": "mcp-20261117T013050",
+   "service": "mcp",
+   "status": "down",
+   "start": "2026-11-17T01:30:50.907Z",
+   "end": "2026-11-17T01:35:26.908Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 6,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/6"
+  },
+  {
+   "id": "push-20261117T013050",
+   "service": "push",
+   "status": "down",
+   "start": "2026-11-17T01:30:50.907Z",
+   "end": "2026-11-17T01:35:26.908Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 7,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/7"
+  },
+  {
+   "id": "marketplace-20261117T013050",
+   "service": "marketplace",
+   "status": "down",
+   "start": "2026-11-17T01:30:50.907Z",
+   "end": "2026-11-17T01:35:26.908Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 8,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/8"
+  },
+  {
+   "id": "app-20261116T231533",
+   "service": "app",
+   "status": "degraded",
+   "start": "2026-11-16T23:15:33.985Z",
+   "end": "2026-11-16T23:20:39.765Z",
+   "message": "Slow response (5902 ms)",
+   "lastMessage": "Slow response (5902 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "api-20261116T231533",
+   "service": "api",
+   "status": "degraded",
+   "start": "2026-11-16T23:15:33.985Z",
+   "end": "2026-11-16T23:20:39.765Z",
+   "message": "Slow response (5745 ms)",
+   "lastMessage": "Slow response (5745 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "mcp-20261116T231533",
+   "service": "mcp",
+   "status": "degraded",
+   "start": "2026-11-16T23:15:33.985Z",
+   "end": "2026-11-16T23:20:39.765Z",
+   "message": "Slow response (5736 ms)",
+   "lastMessage": "Slow response (5736 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "website-20261116T225036",
+   "service": "website",
+   "status": "degraded",
+   "start": "2026-11-16T22:50:36.325Z",
+   "end": "2026-11-16T22:55:40.004Z",
+   "message": "Slow response (9409 ms)",
+   "lastMessage": "Slow response (9409 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "docs-20261116T225036",
+   "service": "docs",
+   "status": "degraded",
+   "start": "2026-11-16T22:50:36.325Z",
+   "end": "2026-11-16T22:55:40.004Z",
+   "message": "Slow response (5871 ms)",
+   "lastMessage": "Slow response (5871 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "api-20261116T180537",
+   "service": "api",
+   "status": "degraded",
+   "start": "2026-11-16T18:05:37.772Z",
+   "end": "2026-11-16T18:10:37.251Z",
+   "message": "Slow response (4270 ms)",
+   "lastMessage": "Slow response (4270 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "marketplace-20261116T163054",
+   "service": "marketplace",
+   "status": "degraded",
+   "start": "2026-11-16T16:30:54.925Z",
+   "end": "2026-11-16T16:40:38.258Z",
+   "message": "Slow response (4037 ms)",
+   "lastMessage": "Slow response (4037 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "website-20261116T153052",
+   "service": "website",
+   "status": "degraded",
+   "start": "2026-11-16T15:30:52.991Z",
+   "end": "2026-11-16T15:35:29.368Z",
+   "message": "Slow response (5313 ms)",
+   "lastMessage": "Slow response (5313 ms)",
+   "failedChecks": 1
+  },
+  {
+   "id": "app-20261116T091543",
+   "service": "app",
+   "status": "down",
+   "start": "2026-11-16T09:15:43.537Z",
+   "end": "2026-11-16T09:20:38.622Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 1,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/1"
+  },
+  {
+   "id": "api-20261116T091543",
+   "service": "api",
+   "status": "down",
+   "start": "2026-11-16T09:15:43.537Z",
+   "end": "2026-11-16T09:20:38.622Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 2,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/2"
+  },
+  {
+   "id": "mcp-20261116T091543",
+   "service": "mcp",
+   "status": "down",
+   "start": "2026-11-16T09:15:43.537Z",
+   "end": "2026-11-16T09:20:38.622Z",
+   "message": "Timeout",
+   "lastMessage": "Timeout",
+   "failedChecks": 1,
+   "issue": 3,
+   "issueUrl": "https://github.com/yannicschuller/flowplan-status/issues/3"
+  },
+  {
+   "id": "marketplace-20261116T091543",
+   "service": "marketplace",
+   "status": "degraded",
+   "start": "2026-11-16T09:15:43.537Z",
+   "end": "2026-11-16T09:20:38.622Z",
+   "message": "Slow response (7708 ms)",
+   "lastMessage": "Slow response (7708 ms)",
+   "failedChecks": 1
+  }
+ ],
+ "updatedAt": "2026-11-21T14:00:55.454Z"
+}
