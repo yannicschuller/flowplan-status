@@ -75,6 +75,24 @@
           "json": {
             "status": "ok"
           }
+        },
+        {
+          "id": "billing",
+          "name": {
+            "de": "Tarife und Abrechnung",
+            "en": "Plans and billing"
+          },
+          "description": {
+            "de": "billing.flowplan.org",
+            "en": "billing.flowplan.org"
+          },
+          "url": "https://billing.flowplan.org/api/health",
+          "expect": [
+            200
+          ],
+          "json": {
+            "status": "ok"
+          }
         }
       ]
     },
